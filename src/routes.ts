@@ -6,6 +6,10 @@ import { CreateMenuItemController } from "./controllers/CreateMenuItemController
 import { CreateOrderController } from "./controllers/CreateOrderController";
 import { CreateOrderItemController } from "./controllers/CreateOrderItemController";
 import { CreateTableController } from "./controllers/CreateTableController";
+import { ListCommandByDateController } from "./controllers/ListCommandByDateController";
+import { ListMenuItemController } from "./controllers/ListMenuItemController";
+import { ListTableController } from "./controllers/ListTableController";
+import { ShowCommandController } from "./controllers/ShowCommandController";
 
 const router = Router();
 
@@ -29,5 +33,18 @@ router.post("/order", createOrderController.handle);
 
 const createOrderItemController = new CreateOrderItemController();
 router.post("/orderitem", createOrderItemController.handle);
+
+const showCommandController = new ShowCommandController();
+router.get("/command:id", showCommandController.handle);
+
+const listTableController = new ListTableController();
+router.get("/tables", listTableController.handle);
+
+const listCommandByDateController = new ListCommandByDateController();
+router.get("/commands/data:", listCommandByDateController.handle);
+
+const listMenuItemController = new ListMenuItemController();
+router.get("/menuitems", listMenuItemController.handle);
+
 
 export { router };
