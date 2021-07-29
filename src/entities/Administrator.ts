@@ -8,7 +8,7 @@ import {
 class Administrator {
 
     @PrimaryGeneratedColumn('increment')
-    readonly id_administrador: string;
+    readonly idAdministrador: string;
 
     @Column()
     login: string;

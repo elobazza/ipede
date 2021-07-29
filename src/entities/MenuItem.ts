@@ -8,7 +8,7 @@ import {
 class MenuItem {
 
     @PrimaryGeneratedColumn('increment')
-    readonly id_itemcardapio: string;
+    readonly idItemCardapio: string;
 
     @Column()
     nome: string;
@@ -17,7 +17,7 @@ class MenuItem {
     descricao: string;
 
     @Column()
-    valor_unitario: number;
+    valorUnitario: number;
 }
 
 export { MenuItem }

@@ -12,24 +12,30 @@ import { Table } from "./Table";
 class Command {
 
     @PrimaryGeneratedColumn('increment')
-    readonly id_comanda: string;
+    readonly idComanda: string;
 
     @Column()
-    nome_cliente: string;
+    nomeCliente: string;
 
     @Column()
     situacao: number;
 
     @Column()
-    abertura: Timestamp;
+    dataAbertura: string;
 
     @Column()
-    fechamento: Timestamp;
+    horaAbertura: string;
 
     @Column()
-    id_mesa: string;
+    dataFechamento: string;
 
-    @JoinColumn({ name: "id_mesa" })
+    @Column()
+    horaFechamento: string;
+
+    @Column()
+    idMesa: string;
+
+    @JoinColumn({ name: "idMesa" })
     @ManyToOne(() => Table)
     table: Table;
 

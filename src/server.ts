@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import express, { Request, Response, NextFunction } from "express";
-//import "express-async-errors";
+import "express-async-errors";
 
 import { router } from "./routes";
 
@@ -27,4 +27,4 @@ app.use(
     }
 );
 
-app.listen(4000, () => console.log("Server is running"));
+app.listen(3000, () => console.log("Server is running"));

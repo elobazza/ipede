@@ -8,7 +8,7 @@ export class CreateAdministrators1626896969213 implements MigrationInterface {
                 name: "administrador",
                 columns: [
                     {
-                        name: "id_administrador",
+                        name: "idAdministrador",
                         type: "serial",
                         isPrimary: true,
                     },
@@ -18,7 +18,7 @@ export class CreateAdministrators1626896969213 implements MigrationInterface {
                     },
                     {
                         name: "senha",
-                        type: "varchar(32)",
+                        type: "varchar(100)",
                     }
                 ],
             })

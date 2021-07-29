@@ -8,7 +8,7 @@ export class CreateKitchens1626897279467 implements MigrationInterface {
                 name: "cozinha",
                 columns: [
                     {
-                        name: "id_cozinha",
+                        name: "idCozinha",
                         type: "serial",
                         isPrimary: true,
                     },
@@ -18,7 +18,7 @@ export class CreateKitchens1626897279467 implements MigrationInterface {
                     },
                     {
                         name: "senha",
-                        type: "varchar(32)",
+                        type: "varchar(100)",
                     }
                 ],
             })

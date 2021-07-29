@@ -8,7 +8,7 @@ export class CreateMenuItems1626897992546 implements MigrationInterface {
                 name: "itemcardapio",
                 columns: [
                     {
-                        name: "id_itemcardapio",
+                        name: "idItemCardapio",
                         type: "serial",
                         isPrimary: true,
                     },
@@ -21,7 +21,7 @@ export class CreateMenuItems1626897992546 implements MigrationInterface {
                         type: "varchar(100)",
                     },
                     {
-                        name: "valor_unitario",
+                        name: "valorUnitario",
                         type: "numeric",
                     }
                 ]

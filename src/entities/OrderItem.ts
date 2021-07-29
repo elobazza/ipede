@@ -12,22 +12,22 @@ import { Order } from "./Order";
 class OrderItem {
 
     @PrimaryGeneratedColumn('increment')
-    readonly id_itempedido: string;
+    readonly idItemPedido: string;
 
     @Column()
     quantidade: number;
 
     @Column()
-    id_itemcardapio: string;
+    idItemCardapio: string;
 
-    @JoinColumn({ name: "id_itemcardapio" })
+    @JoinColumn({ name: "idItemCardapio" })
     @ManyToOne(() => MenuItem)
     menuItem: MenuItem;
 
     @Column()
-    id_pedido: string;
+    idPedido: string;
 
-    @JoinColumn({ name: "id_pedido" })
+    @JoinColumn({ name: "idPedido" })
     @ManyToOne(() => MenuItem)
     order: Order;
 }

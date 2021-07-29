@@ -8,7 +8,7 @@ import {
 class Table {
 
     @PrimaryGeneratedColumn('increment')
-    readonly id_mesa: string;
+    readonly idMesa: string;
 
     @Column()
     login: string;

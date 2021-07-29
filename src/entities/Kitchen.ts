@@ -8,7 +8,7 @@ import {
 class Kitchen {
 
     @PrimaryGeneratedColumn('increment')
-    readonly id_cozinha: string;
+    readonly idCozinha: string;
 
     @Column()
     login: string;

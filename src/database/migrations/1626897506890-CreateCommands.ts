@@ -8,16 +8,16 @@ export class CreateCommands1626897506890 implements MigrationInterface {
                 name: "comanda",
                 columns: [
                     {
-                        name: "id_comanda",
+                        name: "idComanda",
                         type: "serial",
                         isPrimary: true,
                     },
                     {
-                        name: "id_mesa",
+                        name: "idMesa",
                         type: "integer",
                     },
                     {
-                        name: "nome_cliente",
+                        name: "nomeCliente",
                         type: "varchar(50)",
                     },
                     {
@@ -25,21 +25,31 @@ export class CreateCommands1626897506890 implements MigrationInterface {
                         type: "integer",
                     },
                     {
-                        name: "abertura",
-                        type: "timestamp",
-                        default: "now()",
+                        name: "dataAbertura",
+                        type: "varchar(10)",
                     },
                     {
-                        name: "fechamento",
-                        type: "timestamp",
+                        name: "horaAbertura",
+                        type: "varchar(8)",
+                    },
+                    {
+                        name: "dataFechamento",
+                        type: "varchar(10)",
+                        isNullable: true,
+                    },
+                    {
+                        name: "horaFechamento",
+                        type: "varchar(8)",
+                        isNullable: true,
                     }
+
                 ],
                 foreignKeys: [
                     {
                         name: "FKMesa",
                         referencedTableName: "mesa",
-                        referencedColumnNames: ["id_mesa"],
-                        columnNames: ["id_mesa"],
+                        referencedColumnNames: ["idMesa"],
+                        columnNames: ["idMesa"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL",
                     }

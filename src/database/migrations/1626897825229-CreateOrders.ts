@@ -8,12 +8,12 @@ export class CreateOrders1626897825229 implements MigrationInterface {
                 name: "pedido",
                 columns: [
                     {
-                        name: "id_pedido",
+                        name: "idPedido",
                         type: "serial",
                         isPrimary: true,
                     },
                     {
-                        name: "id_comanda",
+                        name: "idComanda",
                         type: "integer",
                     },
                     {
@@ -21,21 +21,25 @@ export class CreateOrders1626897825229 implements MigrationInterface {
                         type: "integer",
                     },
                     {
-                        name: "datahora",
-                        type: "timestamp",
-                        default: "now()",
+                        name: "data",
+                        type: "varchar(10)",
+                    },
+                    {
+                        name: "hora",
+                        type: "varchar(8)",
                     },
                     {
                         name: "observacao",
                         type: "varchar(100)",
+                        isNullable: true,
                     }
                 ],
                 foreignKeys: [
                     {
                         name: "FKComanda",
                         referencedTableName: "comanda",
-                        referencedColumnNames: ["id_comanda"],
-                        columnNames: ["id_comanda"],
+                        referencedColumnNames: ["idComanda"],
+                        columnNames: ["idComanda"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL",
                     }

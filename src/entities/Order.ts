@@ -11,21 +11,24 @@ import { Command } from "./Command";
 @Entity("pedido")
 class Order {
     @PrimaryGeneratedColumn('increment')
-    readonly id_pedido: string;
+    readonly idPedido: string;
 
     @Column()
     situacao: number;
 
     @Column()
-    datahora: Timestamp;
+    data: string;
+
+    @Column()
+    hora: string;
 
     @Column()
     observacao: string;
 
     @Column()
-    id_comanda: string;
+    idComanda: string;
 
-    @JoinColumn({ name: "id_comanda" })
+    @JoinColumn({ name: "idComanda" })
     @ManyToOne(() => Command)
     command: Command;
 

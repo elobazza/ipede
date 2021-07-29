@@ -8,7 +8,7 @@ export class CreateTables1626897359713 implements MigrationInterface {
                 name: "mesa",
                 columns: [
                     {
-                        name: "id_mesa",
+                        name: "idMesa",
                         type: "serial",
                         isPrimary: true,
                     },
@@ -18,7 +18,7 @@ export class CreateTables1626897359713 implements MigrationInterface {
                     },
                     {
                         name: "senha",
-                        type: "varchar(32)",
+                        type: "varchar(100)",
                     },
                     {
                         name: "numero",

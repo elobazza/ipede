@@ -8,16 +8,16 @@ export class CreateOrderItems1626898170153 implements MigrationInterface {
                 name: "itempedido",
                 columns: [
                     {
-                        name: "id_itempedido",
+                        name: "idItemPedido",
                         type: "serial",
                         isPrimary: true,
                     },
                     {
-                        name: "id_itemcardapio",
+                        name: "idItemCardapio",
                         type: "integer",
                     },
                     {
-                        name: "id_pedido",
+                        name: "idPedido",
                         type: "integer",
                     },
                     {
@@ -29,16 +29,16 @@ export class CreateOrderItems1626898170153 implements MigrationInterface {
                     {
                         name: "FKItemCardapio",
                         referencedTableName: "itemcardapio",
-                        referencedColumnNames: ["id_itemcardapio"],
-                        columnNames: ["id_itemcardapio"],
+                        referencedColumnNames: ["idItemCardapio"],
+                        columnNames: ["idItemCardapio"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL",
                     },
                     {
                         name: "FKPedido",
                         referencedTableName: "pedido",
-                        referencedColumnNames: ["id_pedido"],
-                        columnNames: ["id_pedido"],
+                        referencedColumnNames: ["idPedido"],
+                        columnNames: ["idPedido"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL",
                     }
