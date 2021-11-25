@@ -1,16 +1,16 @@
 import { getCustomRepository } from "typeorm";
 import { CommandRepositories } from "../repositories/CommandRepositories";
 
-class ListCommandByDateService {
-    async execute(dataAbertura: string) {
+class ListOpenCommandService {
+    async execute() {
         const commandRepositories = getCustomRepository(CommandRepositories);
 
         const command = await commandRepositories.find({
-            dataAbertura
+            situacao: 1
         });
 
         return command;
     }
 }
 
-export { ListCommandByDateService };
+export { ListOpenCommandService };

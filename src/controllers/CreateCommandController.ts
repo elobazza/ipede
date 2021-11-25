@@ -3,12 +3,13 @@ import { CreateCommandService } from "../services/CreateCommandService";
 
 class CreateCommandController {
     async handle(request: Request, response: Response) {
-        const { nomeCliente, situacao, idMesa } = request.body;
+        const { nomeCliente, idMesa } = request.body;
 
         const createCommandService = new CreateCommandService();
 
         const [dataAbertura, horaAbertura] = new Date().toLocaleString().split(" ");
 
+        const situacao = 1;
 
         const command = await createCommandService.execute({
             nomeCliente,
